@@ -25,6 +25,9 @@
   "dependencies": {
     "cli-progress": "^2.0.0",
     "commander": "^2.15.1",
-    "get-image-urls": "^1.0.5"
+    "get-image-urls": "^1.0.5",
+    "got": "^8.3.1",
+    "image-type": "^3.0.0",
+    "is-url-superb": "^2.0.0"    
   }
 }
