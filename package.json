@@ -1,0 +1,30 @@
+{
+  "name": "img-downloader",
+  "version": "1.0.0",
+  "description": "im",
+  "main": "index.js",
+  "bin": {
+    "pingo": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karimation/img-downloader.git"
+  },
+  "keywords": [
+    "k"
+  ],
+  "author": "“kerim <“selmi.kerim@gmail.com\nnpm set init.author.email “selmi.kerim@gmail.com> (“http://www.karimation.com\nnpm set init.author.url “http://www.karimation.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karimation/img-downloader/issues"
+  },
+  "homepage": "https://github.com/karimation/img-downloader#readme",
+  "dependencies": {
+    "cli-progress": "^2.0.0",
+    "commander": "^2.15.1",
+    "get-image-urls": "^1.0.5"
+  }
+}
