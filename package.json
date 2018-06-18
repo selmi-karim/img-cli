@@ -4,7 +4,7 @@
   "description": "im",
   "main": "index.js",
   "bin": {
-    "pingo": "./index.js"
+    "pingo": "./src/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,6 +28,6 @@
     "get-image-urls": "^1.0.5",
     "got": "^8.3.1",
     "image-type": "^3.0.0",
-    "is-url-superb": "^2.0.0"    
+    "is-url-superb": "^2.0.0"
   }
 }
