@@ -1,16 +1,20 @@
 const fs = require('fs')
+const mkdirp = require('mkdirp')
+var getDirName = require('path').dirname
 const imageType = require('image-type')
 const stream = require('./stream.js')
 
-const url = (directory,name,url) => {
-    stream.imageBuffer(url).then(buffer => {
+const saveImg = (directory, name, imgURL,callback) => {
+    stream.imageBuffer(imgURL).then(buffer => {
         const type = imageType(buffer)
-        fs.writeFile(directory+name+ type.ext, buffer, (err) => { 
-            if (err) console.log('error: '+err)
-            else {
-                console.log('done')
-            }
+        const path = directory + '/' + name + '.' + type.ext
+        mkdirp(getDirName(path), function (err) {
+            if (err) callback(err)
+            fs.writeFile(path, buffer, (err) => {
+                if (err) callback(err)
+                return callback('done')
+            })
         })
     })
 }
-module.exports = { url }
+module.exports = { saveImg }
