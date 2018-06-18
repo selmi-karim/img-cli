@@ -21,10 +21,12 @@ program
     .action((url, options) => {
         const type = options.type || "all"
         const directory = options.directory || "images/"
-        if (!isURL(url))
+        if (!isURL(url)) {
             console.log('error')
-        else crawler.getImage(url)
-
+        }
+        else {
+            crawler.getImage(url,type,directory)
+        }
     });
 
 
