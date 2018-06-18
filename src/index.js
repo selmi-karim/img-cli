@@ -5,20 +5,21 @@
 const program = require('commander');
 const crawler = require('./crawler.js');
 
+
 program
     .version('1.0.0', '-v, --version')
     .description('Images Downloader');
 
 program
-    .command('img <url> [directory] [type]')
+    .command('img <url>')
     .description('download all images from url with optional directory name and specific image type')
-    .action((url, directory,type) => {
-        console.log('url: ' + url)
-        console.log('directory: ' + directory)
-        console.log('type: ' + type)
-        console.log('crawler: ' + crawler.getImage())
-        
-       
+    .option('-d, --directory [directory]', 'choose a specific directory name')
+    .option("-t, --type [type]", "Which image type")
+    .action((url, options) => {
+        const type = options.type || "all"
+        const directory = options.directory || "images/"
+        console.log('isurl: ' + isURL(url))
     });
+
 
 program.parse(process.argv);
