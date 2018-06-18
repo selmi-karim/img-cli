@@ -4,7 +4,10 @@
 
 const program = require('commander');
 const crawler = require('./crawler.js');
-
+const isURL = (url) => {
+    const pattern = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/
+    return pattern.test(url)
+}
 
 program
     .version('1.0.0', '-v, --version')
@@ -18,7 +21,10 @@ program
     .action((url, options) => {
         const type = options.type || "all"
         const directory = options.directory || "images/"
-        console.log('isurl: ' + isURL(url))
+        if (!isURL(url))
+            console.log('error')
+        else crawler.getImage(url)
+
     });
 
 
