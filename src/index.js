@@ -1,19 +1,29 @@
 #!/usr/bin/env node
 
-'use strict' 
 
-const program = require('commander') 
-const crawler = require('./crawler.js') 
+/*
+ * @Author: kerim selmi 
+ * @Date: 2018-06-18 16:54:04 
+ * @Last Modified by: kerim selmi
+ * @Last Modified time: 2018-06-18 16:57:58
+ */
+'use strict'
+
+const program = require('commander')
+const crawler = require('./crawler.js')
 const download = require('./download.js')
+const styles = require('./styles')
+const chalk = require('chalk')
 
 const isURL = (url) => {
     const pattern = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/
     return pattern.test(url)
 }
 
+
 program
     .version('1.0.0', '-v, --version')
-    .description('Images Downloader') 
+    .description('Images Downloader')
 
 program
     .command('all <url>')
@@ -21,15 +31,18 @@ program
     .option('-d, --directory [directory]', 'choose a specific directory name')
     .option("-t, --type [type]", "Choose a image type (png, jpg, gif..)")
     .action((url, options) => {
+        styles.clear()
         const type = options.type || "all"
         const directory = options.directory || "images"
         if (!isURL(url)) {
-            console.log('error')
+            styles.red('ERROR: invalid url')
         }
         else {
-            crawler.getImage(url,type,directory)
+            const res = crawler.getImage(url, type, directory)
+            styles.bar.stop()
+            //console.log('done')
         }
-}) 
+    })
 
 
 program
@@ -37,18 +50,20 @@ program
     .description('download spefic image')
     .option('-d, --directory [directory]', 'choose a specific directory name')
     .action((url, options) => {
+        styles.clear()
+        styles.show('pingo')
         const type = options.type || "all"
         const directory = options.directory || "images"
         if (!isURL(url)) {
-            console.log('error')
+            styles.red('ERROR: invalid url')
         }
         else {
             //crawler.getImage(url,type,directory)
             download.saveImg(directory, 'solo', url
                 , (response) => {
-                  //console.log('response: ' + response)
-            })
+                    //console.log('response: ' + response)
+                })
         }
-}) 
+    })
 
 program.parse(process.argv) 
