@@ -2,13 +2,14 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-18 16:54:28 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-19 00:20:20
+ * @Last Modified time: 2018-06-19 11:38:27
  */
 var path = require('path')
 var spawn = require('child_process').spawn
 var phantomjs = require('phantomjs-prebuilt')
 var Promise = require('bluebird')
-
+var styles = require('./styles')
+var counter = 0;
 const getImageUrls = (url, callback) => {
   var phantomArgs = [
     path.join(__dirname, '/', 'phantomjs-prebuilt.js'),
@@ -22,17 +23,18 @@ const getImageUrls = (url, callback) => {
 
     phantom.stdout.on('data', function (data) {
       data = data.toString()
-      if (data.indexOf('Error') == 0) {
+      if (data.indexOf('newimg') == 0) {
+        
+        styles.spinner1.text = ++counter +' Images'
+        //console.log('data: ' + data)
+      } else if (data.indexOf('Error') == 0) {
         error = data
       } else {
+        counter = 0; 
         try {
-
-          //TODO
-          console.log(data)
           images = JSON.parse(data)
         }
         catch (e) {
-          //console.log('Error', data)
           error = e
           images = null
         }
