@@ -2,7 +2,7 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-18 16:54:02 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-19 11:53:30
+ * @Last Modified time: 2018-06-19 12:15:06
  */
 const chalk = require('chalk')
 const figlet = require('figlet')
@@ -24,8 +24,6 @@ const clear = () => {
 }
 
 process.on('exit', function (){
-    console.log()
-    warning('Done')
     console.log()
     
   });
