@@ -5,7 +5,7 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-18 16:54:04 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-19 10:27:26
+ * @Last Modified time: 2018-06-19 12:42:35
  */
 'use strict'
 
@@ -53,6 +53,7 @@ program
     .option('-d, --directory [directory]', 'choose a specific directory name')
     .action((url, options) => {
         styles.clear()
+        console.log('url: '+url)
         styles.spinner2.start()
         const directory = options.directory || "images"
         if (!isURL(url)) {
@@ -61,12 +62,7 @@ program
             styles.error('ERROR: Invalid URL format')
         }
         else {
-            //crawler.getImage(url,type,directory)
-            download.solo(directory, 'solo', url
-                , (response) => {
-                    styles.spinner2.succeed()
-                })
-
+            download.solo(directory, 'solo', url)  
         }
     })
 
