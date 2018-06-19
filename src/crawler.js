@@ -2,7 +2,7 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-18 16:54:30 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-19 11:50:24
+ * @Last Modified time: 2018-06-19 13:05:37
  */
 const getImages = require('./img_urls')
 const download = require('./download.js')
@@ -28,7 +28,7 @@ const getImage = (url, type, directory) => {
       }
     }
     else {
-      styles.red(err)
+      //styles.red('-------->> ')
     }
   })
 }
