@@ -2,7 +2,7 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-18 16:54:30 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-19 00:09:44
+ * @Last Modified time: 2018-06-19 11:50:24
  */
 const getImages = require('./img_urls')
 const download = require('./download.js')
@@ -20,6 +20,7 @@ const getImage = (url, type, directory) => {
     if (!err) {
       styles.spinner1.succeed()
       styles.green(images.length + ' images found');
+      console.log()
       // start the progress bar with a total value of 200 and start value of 0
       if (images.length > 0) {
         styles.bar.start(images.length, 0)
