@@ -2,7 +2,7 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-19 13:01:08 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-19 13:01:28
+ * @Last Modified time: 2018-06-19 13:07:18
  */
 /*
  * @Author: kerim selmi 
@@ -66,7 +66,7 @@ const getImageUrls = (url, callback) => {
       if (!images && !error) {
         error = new Error('no images found')
       }      
-        resolve(images)
+      resolve(images)
       if (callback) callback(null, images)
       
     })
