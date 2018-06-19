@@ -1,8 +1,8 @@
 /*
  * @Author: kerim selmi 
  * @Date: 2018-06-18 16:54:28 
- * @Last Modified by:   kerim selmi 
- * @Last Modified time: 2018-06-18 16:54:28 
+ * @Last Modified by: kerim selmi
+ * @Last Modified time: 2018-06-19 00:20:20
  */
 var path = require('path')
 var spawn = require('child_process').spawn
@@ -21,16 +21,18 @@ const getImageUrls = (url, callback) => {
     var error = null
 
     phantom.stdout.on('data', function (data) {
-      data = "" + data
+      data = data.toString()
       if (data.indexOf('Error') == 0) {
         error = data
-      }
-      else {
+      } else {
         try {
+
+          //TODO
+          console.log(data)
           images = JSON.parse(data)
         }
         catch (e) {
-          console.log('Error', data)
+          //console.log('Error', data)
           error = e
           images = null
         }
