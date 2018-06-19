@@ -2,7 +2,7 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-18 16:54:23 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-18 23:03:19
+ * @Last Modified time: 2018-06-19 12:40:26
  */
 const fs = require('fs')
 const mkdirp = require('mkdirp')
@@ -38,7 +38,8 @@ const solo = (directory, name, imgURL) => {
     stream.imageBuffer(imgURL).then(buffer => {
         const type = imageType(buffer)
         if(buffer===null) {
-            styles.red('try to use valid url')
+            styles.spinner2.fail()
+            styles.error('no image found')
             return null
         }
         const path = directory + '/' + name + '.' + type.ext
@@ -52,7 +53,9 @@ const solo = (directory, name, imgURL) => {
                     styles.red(err)
                     return err
                 }
-                styles.bar.increment(1)
+                styles.spinner2.succeed()
+                styles.warning('Done')
+                process.exit(1)       
             })
         })
     })
