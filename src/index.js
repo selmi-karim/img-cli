@@ -5,7 +5,7 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-18 16:54:04 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-19 00:12:57
+ * @Last Modified time: 2018-06-19 10:27:26
  */
 'use strict'
 
@@ -37,12 +37,12 @@ program
         const type = options.type || "all"
         const directory = options.directory || "images"
         if (!isURL(url)) {
-            styles.red('ERROR: invalid url')
             styles.spinner1.fail()
+            console.log()
+            styles.error('ERROR: invalid url')
         }
         else {
             crawler.getImage(url, type, directory)
-
         }
     })
 
@@ -56,16 +56,17 @@ program
         styles.spinner2.start()
         const directory = options.directory || "images"
         if (!isURL(url)) {
-            styles.red('ERROR: invalid url')
             styles.spinner2.fail()
+            console.log()
+            styles.error('ERROR: Invalid URL format')
         }
         else {
             //crawler.getImage(url,type,directory)
             download.solo(directory, 'solo', url
                 , (response) => {
                     styles.spinner2.succeed()
-                    //console.log('response: ' + response)
                 })
+
         }
     })
 
