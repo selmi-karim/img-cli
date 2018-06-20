@@ -2,11 +2,11 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-19 13:01:08 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-20 09:40:09
+ * @Last Modified time: 2018-06-20 12:01:06
  */
 var path = require('path')
 var spawn = require('child_process').spawn
-var phantomjs = require('phantomjs-prebuilt')
+var phantomjs = require('phantomjs')
 var Promise = require('bluebird')
 var styles = require('./styles')
 var counter = 0;
