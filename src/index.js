@@ -5,7 +5,7 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-18 16:54:04 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-19 12:42:35
+ * @Last Modified time: 2018-06-20 10:59:25
  */
 'use strict'
 
@@ -28,6 +28,7 @@ program
 
 program
     .command('all <url>')
+    .alias('a')
     .description('download all images from url with optional directory name and specific image type')
     .option('-d, --directory [directory]', 'choose a specific directory name')
     .option("-t, --type [type]", "Choose a image type (png, jpg, gif..)")
@@ -49,11 +50,11 @@ program
 
 program
     .command('solo <url>')
+    .alias('s')
     .description('download spefic image')
     .option('-d, --directory [directory]', 'choose a specific directory name')
     .action((url, options) => {
         styles.clear()
-        console.log('url: '+url)
         styles.spinner2.start()
         const directory = options.directory || "images"
         if (!isURL(url)) {
@@ -62,8 +63,21 @@ program
             styles.error('ERROR: Invalid URL format')
         }
         else {
-            download.solo(directory, 'solo', url)  
+            download.solo(directory, 'solo', url)
         }
     })
+program
+    .command('*')
+    .description('unsupported command')
+    .action(() => {
+        styles.clear()
+        styles.error('Invalid command\nSee img --help for a list of available commands.')
+    })
 
-program.parse(process.argv) 
+program.parse(process.argv)
+
+// unsupported command
+if (!program.args.length) {
+    styles.clear()
+    program.help()
+} 
