@@ -1,8 +1,9 @@
 {
   "name": "img-cli",
-  "version": "0.1.0",
-  "description": "im",
-  "main": "index.js",
+  "version": "0.1.3",
+  "description": "An interactive Command-Line Interface Build in NodeJS for downloading a single image or multiple images to disk from URL",
+  "main": "bin/index.js",
+  "preferGlobal": true,
   "bin": {
     "img": "./src/index.js"
   },
@@ -14,7 +15,15 @@
     "url": "git+https://github.com/karimation/img-downloader.git"
   },
   "keywords": [
-    "image downloader"
+    "image downloader",
+    "image command line interface",
+    "download",
+    "phantomJS",
+    "downloading",
+    "buffer",
+    "crawling",
+    "webpage",
+    "nodejs"
   ],
   "author": "“kerim <“selmi.kerim@gmail.com\nnpm set init.author.email “selmi.kerim@gmail.com> (“http://www.karimation.com\nnpm set init.author.url “http://www.karimation.com)",
   "license": "MIT",
@@ -29,7 +38,9 @@
     "figlet": "^1.2.0",
     "got": "^8.3.1",
     "image-type": "^3.0.0",
+    "img-cli": "^0.1.2",
     "ora": "^2.1.0",
-    "phantomjs-prebuilt": "^2.0.0"
+    "phantomjs-prebuilt": "^2.1.16",
+    "bluebird": "^3.5.1"
   }
 }
