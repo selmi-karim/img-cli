@@ -2,7 +2,7 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-18 16:54:23 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-20 14:42:25
+ * @Last Modified time: 2018-06-20 15:39:11
  */
 const fs = require('fs')
 const mkdirp = require('mkdirp')
@@ -14,6 +14,10 @@ const styles = require('./styles')
 
 const saveImg = (directory, name, imgURL) => {
     stream.imageBuffer(imgURL).then(buffer => {
+        if (buffer === null) {
+            styles.bar.increment(1)
+            return null
+        } 
         const type = imageType(buffer)
         const path = directory + '/' + name + '.' + type.ext
         mkdirp(getDirName(path), function (err) {
@@ -36,12 +40,12 @@ const saveImg = (directory, name, imgURL) => {
 
 const solo = (directory, name, imgURL) => {
     stream.imageBuffer(imgURL).then(buffer => {
-        const type = imageType(buffer)
-        if(buffer===null) {
+        if (buffer === null) {
             styles.spinner2.fail()
             styles.error('no image found')
             return null
         }
+        const type = imageType(buffer)
         const path = directory + '/' + name + '.' + type.ext
         mkdirp(getDirName(path), function (err) {
             if (err) {
@@ -55,10 +59,10 @@ const solo = (directory, name, imgURL) => {
                 }
                 styles.spinner2.succeed()
                 styles.warning('Done')
-                process.exit(1)       
+                process.exit(1)
             })
         })
     })
     return true
 }
-module.exports = { saveImg,solo }
+module.exports = { saveImg, solo }
