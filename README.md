@@ -13,7 +13,7 @@ yarn add global img-cli
 
 
 # Command Topics
-### `img all`
+### img all
 
 ```
 USAGE
@@ -33,7 +33,7 @@ EXAMPLES
 
 ```
 
-### `img solo`
+### img solo
 
 ```
 USAGE
