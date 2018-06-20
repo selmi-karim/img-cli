@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/karimation/img-downloader#readme",
   "dependencies": {
-    "phantomjs": "^2.1.7",
+    "phantomjs-prebuilt": "^2.1.16",
     "bluebird": "^3.5.1",
     "chalk": "^2.4.1",
     "cli-progress": "^2.0.0",
