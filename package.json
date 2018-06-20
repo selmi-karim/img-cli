@@ -1,11 +1,11 @@
 {
   "name": "img-cli",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "description": "An interactive Command-Line Interface Build in NodeJS for downloading a single image or multiple images to disk from URL",
   "main": "index.js",
   "preferGlobal": true,
   "bin": {
-    "img": "index.js"
+    "img": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
