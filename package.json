@@ -1,6 +1,6 @@
 {
   "name": "img-cli",
-  "version": "0.1.3",
+  "version": "0.1.9",
   "description": "An interactive Command-Line Interface Build in NodeJS for downloading a single image or multiple images to disk from URL",
   "main": "./src/index.js",
   "preferGlobal": true,
@@ -31,11 +31,8 @@
     "url": "https://github.com/karimation/img-downloader/issues"
   },
   "homepage": "https://github.com/karimation/img-downloader#readme",
-  "engines": {
-    "node": ">=0.12"
-  },
   "dependencies": {
-    "phantomjs-prebuilt": "^2.1.16",
+    "phantomjs": "^2.1.7",
     "bluebird": "^3.5.1",
     "chalk": "^2.4.1",
     "cli-progress": "^2.0.0",
