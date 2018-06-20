@@ -62,4 +62,4 @@ kerim selmi <a href="http://www.karimation.com">karimation</a>
 
 # License
 
-This project is licensed under the  <a href="LICENSE">MIT License</a>
+<a href="LICENSE">MIT License</a>
