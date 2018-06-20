@@ -2,25 +2,7 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-19 13:01:08 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-19 13:07:18
- */
-/*
- * @Author: kerim selmi 
- * @Date: 2018-06-19 13:01:07 
- * @Last Modified by:   kerim selmi 
- * @Last Modified time: 2018-06-19 13:01:07 
- */
-/*
- * @Author: kerim selmi 
- * @Date: 2018-06-19 13:01:06 
- * @Last Modified by:   kerim selmi 
- * @Last Modified time: 2018-06-19 13:01:06 
- */
-/*
- * @Author: kerim selmi 
- * @Date: 2018-06-18 16:54:28 
- * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-19 13:00:57
+ * @Last Modified time: 2018-06-20 09:40:09
  */
 var path = require('path')
 var spawn = require('child_process').spawn
@@ -33,6 +15,7 @@ const getImageUrls = (url, callback) => {
     path.join(__dirname, '/', 'phantomjs-prebuilt.js'),
     url
   ]
+  
 
   return new Promise(function (resolve, reject) {
     var phantom = spawn(phantomjs.path, phantomArgs)
