@@ -2,7 +2,7 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-18 16:54:32 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-20 14:42:06
+ * @Last Modified time: 2018-06-20 15:35:10
  */
 
 const got = require('got')
@@ -17,13 +17,15 @@ const imageBuffer = async (url) => {
     if (!(url && isURL(url))) {
         return null
     } //throw new TypeError('A valid url is required')
+    let response
+    let buffer
     try {
-        const response = await got(url, { encoding: null })
+        response = await got(url, { encoding: null })
     } catch (error) {
         return null
     }
     try {
-        const buffer = Buffer.from(response.body, 'binary')
+        buffer = Buffer.from(response.body, 'binary')
     } catch (e) {
         return null
     }
