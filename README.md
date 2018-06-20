@@ -4,7 +4,7 @@ An interactive Command-Line Interface Build in NodeJS for downloading a single o
 
 
 <p align="center"> 
-<img src="screenshots/test.gif" height= "500" width="350" >
+<img src="screenshots/test.gif"  >
 </p>
 
 # Install
