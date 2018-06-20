@@ -5,14 +5,14 @@
  * @Author: kerim selmi 
  * @Date: 2018-06-18 16:54:04 
  * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-20 10:59:25
+ * @Last Modified time: 2018-06-20 12:47:01
  */
 'use strict'
 
 const program = require('commander')
-const crawler = require('./crawler.js')
-const download = require('./download.js')
-const styles = require('./styles')
+const crawler = require('./src/crawler.js')
+const download = require('./src/download.js')
+const styles = require('./src/styles')
 const chalk = require('chalk')
 
 
