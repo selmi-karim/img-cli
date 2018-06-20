@@ -3,6 +3,10 @@
 An interactive Command-Line Interface Build in NodeJS for downloading a single or multiple images to disk from URL. 
 
 
+<p align="center"> 
+<img src="screenshots/test.gif" height= "500" width="350" >
+</p>
+
 # Install
 
 ```
