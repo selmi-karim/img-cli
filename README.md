@@ -15,7 +15,6 @@ yarn add global img-cli
 
 ```
 
-
 # Command Topics
 ### img all
 
