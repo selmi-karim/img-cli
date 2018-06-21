@@ -27,8 +27,8 @@ Required
   URL: website target
 
 OPTIONS
-  -d, --directory          choose a specific directory name &/| path 
-  -t, --type     Choose a image type (png, jpg, gif..)
+  -d, --directory          choose a specific directory name and/or path 
+  -t, --type               Choose a image type (png, jpg, gif..)
   
 EXAMPLES
   $ img all http://karimation.com
@@ -44,10 +44,10 @@ USAGE
   $ img solo 
 
 Required
-  URL: image URL target
+  URL:                     image URL target
 
 OPTIONS
-  -d, --directory          choose a specific directory name &/| path 
+  -d, --directory          choose a specific directory name and/or path 
   
 EXAMPLES
   $ img solo https://avatars1.githubusercontent.com/u/21101482
