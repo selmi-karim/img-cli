@@ -79,7 +79,7 @@
     }
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@selmi-karim"
+    "registry": "https://registry.npmjs.org"
   },
   "release": {
     "branches": [

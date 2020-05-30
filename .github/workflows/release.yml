@@ -43,7 +43,6 @@ jobs:
             echo "no need to publish new version to GPR"
           else
             echo "GPR should be updated"
-            cat package.json
-            ls *
+            sed -i 's/registry.npmjs.org/npm.pkg.github.com\/@selmi-karim/g' package.json
             npm publish
           fi
