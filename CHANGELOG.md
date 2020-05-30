@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/selmi-karim/img-cli/compare/v1.0.1...v1.0.2) (2020-05-30)
+
+
+### Bug Fixes
+
+* publish to gpr ([033019e](https://github.com/selmi-karim/img-cli/commit/033019eadff0358fd99dd56e905052094bed767c))
+
 ## [1.0.1](https://github.com/selmi-karim/img-cli/compare/v1.0.0...v1.0.1) (2020-05-30)
 
 
