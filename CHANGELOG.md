@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/selmi-karim/img-cli/compare/v1.1.6...v1.2.0) (2020-05-30)
+
+
+### Features
+
+* add gpr ([8a74630](https://github.com/selmi-karim/img-cli/commit/8a746302b12008016bf1ff0c720b3724bb83d5a3))
+
 ## [1.1.6](https://github.com/selmi-karim/img-cli/compare/v1.1.5...v1.1.6) (2020-05-30)
 
 
