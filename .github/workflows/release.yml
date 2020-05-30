@@ -26,6 +26,7 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx -p @semantic-release/changelog -p @semantic-release/git -p semantic-release semantic-release
       - name: Publish to GPR
         env:
@@ -44,20 +45,3 @@ jobs:
             echo "GPR should be updated"
             npm publish
           fi
-      - name: Publish to npm
-        run: |
-          # Get last commit message
-          readonly local last_commit_log=$(git log -1 --pretty=format:"%s")
-          echo "last commit log: $last_commit_log"
-          readonly local filter_count=$(echo "$last_commit_log" | grep -c "$COMMIT_FILTER" )
-          echo "number of occurence of '$COMMIT_FILTER' in '$last_commit_log': $filter_count"
-          if [[ "$filter_count" -eq 0 ]]; then
-            echo "no need to publish new version to NPM"
-          else
-            echo "NPM should be updated"
-            sed -i 's/npm.pkg.github.com/registry.npmjs.org/g' package.json
-            npm publish
-          fi
-        env:
-          COMMIT_FILTER: "chore(release)"
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
