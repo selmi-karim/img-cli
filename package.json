@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/selmi-karim/img-downloader.git"
+    "url": "git+https://github.com/selmi-karim/img-cli.git"
   },
   "keywords": [
     "image downloader",
@@ -31,12 +31,12 @@
     "webpage",
     "nodejs"
   ],
-  "author": "“kerim <“selmi.kerim@gmail.com\nnpm set init.author.email “selmi.kerim@gmail.com> (“http://www.karimation.com\nnpm set init.author.url “http://www.karimation.com)",
+  "author": "“kerim <“selmi.kerim@gmail.com\nnpm set init.author.email “selmi.kerim@gmail.com> (“http://www.selmi-karim.com\nnpm",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/selmi-karim/img-downloader/issues"
+    "url": "https://github.com/selmi-karim/img-cli/issues"
   },
-  "homepage": "https://github.com/selmi-karim/img-downloader#readme",
+  "homepage": "https://github.com/selmi-karim/img-cli#readme",
   "dependencies": {
     "phantomjs-prebuilt": "^2.1.16",
     "bluebird": "^3.5.1",
