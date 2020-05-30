@@ -78,9 +78,6 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@selmi-karim"
-  },
   "release": {
     "branches": [
       "master",
