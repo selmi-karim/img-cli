@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/selmi-karim/img-cli/compare/v1.1.5...v1.1.6) (2020-05-30)
+
+
+### Bug Fixes
+
+* ci registry update ([f6c094a](https://github.com/selmi-karim/img-cli/commit/f6c094a88a965bb6f78b64fb9acc4720aeaea186))
+
 ## [1.1.5](https://github.com/selmi-karim/img-cli/compare/v1.1.4...v1.1.5) (2020-05-30)
 
 
