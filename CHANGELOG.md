@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/selmi-karim/img-cli/compare/v1.0.2...v1.0.3) (2020-05-30)
+
+
+### Bug Fixes
+
+* package scope ([4cd016f](https://github.com/selmi-karim/img-cli/commit/4cd016f5cc0beb001a8546113ba2c583fec8b349))
+* publish config ([b0a933d](https://github.com/selmi-karim/img-cli/commit/b0a933d53f82b3c00dd084cc2c6d79b617b4b38e))
+* semantic release assets ([2e8d6b8](https://github.com/selmi-karim/img-cli/commit/2e8d6b8966983bdc599a89443ed30b7b925f95ce))
+
 ## [1.0.2](https://github.com/selmi-karim/img-cli/compare/v1.0.1...v1.0.2) (2020-05-30)
 
 
