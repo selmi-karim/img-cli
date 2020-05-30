@@ -1,0 +1,29 @@
+name: img-cli
+# This workflow is triggered on pushes to the repository.
+on:
+  push:
+    branches:
+      - master
+      - develop
+jobs:
+  build:
+    # Job name is Greeting
+    name: Semantic-Release
+    # This job runs on Linux
+    runs-on: ubuntu-latest
+    steps:
+      # This step uses GitHub's hello-world-javascript-action: https://github.com/actions/hello-world-javascript-action
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: install node js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+          scope: "@box2home"
+      - name: NPM install
+        run: npm install
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx -p @semantic-release/changelog -p @semantic-release/git -p semantic-release semantic-release
