@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: '@box2home'
+          scope: "@box2home"
       - name: NPM install
         run: npm install
       - name: Release
