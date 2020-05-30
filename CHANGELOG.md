@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/selmi-karim/img-cli/compare/v1.0.3...v1.0.4) (2020-05-30)
+
+
+### Bug Fixes
+
+* publish config scope ([1c035c3](https://github.com/selmi-karim/img-cli/commit/1c035c35044ea9ae41f910dc2339d1add7b5ab11))
+
 ## [1.0.3](https://github.com/selmi-karim/img-cli/compare/v1.0.2...v1.0.3) (2020-05-30)
 
 
