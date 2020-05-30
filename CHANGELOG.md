@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/selmi-karim/img-cli/compare/v1.1.0...v1.1.1) (2020-05-30)
+
+
+### Bug Fixes
+
+* publish to npm ci ([e454753](https://github.com/selmi-karim/img-cli/commit/e4547531ccc1d2ca8223053f8b8037f6daecc0eb))
+
 # [1.1.0](https://github.com/selmi-karim/img-cli/compare/v1.0.4...v1.1.0) (2020-05-30)
 
 
