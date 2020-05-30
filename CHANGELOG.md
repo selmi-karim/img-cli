@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/selmi-karim/img-cli/compare/v1.0.0...v1.0.1) (2020-05-30)
+
+
+### Bug Fixes
+
+* pipeline naming ([168abc8](https://github.com/selmi-karim/img-cli/commit/168abc8c42e525465f0d44b289c09ba5677c2273))
+
 # 1.0.0 (2020-05-30)
 
 
