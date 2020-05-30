@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/selmi-karim/img-cli/compare/v1.0.4...v1.1.0) (2020-05-30)
+
+
+### Features
+
+* sync gpr & npm ([4d45987](https://github.com/selmi-karim/img-cli/commit/4d4598768dd93315642571a431bb0140bdefc701))
+
 ## [1.0.4](https://github.com/selmi-karim/img-cli/compare/v1.0.3...v1.0.4) (2020-05-30)
 
 
