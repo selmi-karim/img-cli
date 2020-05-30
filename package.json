@@ -1,6 +1,6 @@
 {
   "name": "img-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An interactive Command-Line Interface Build in NodeJS for downloading a single image or multiple images to disk from URL",
   "main": "index.js",
   "preferGlobal": true,
@@ -100,7 +100,6 @@
         "@semantic-release/git",
         {
           "assets": [
-            "package-lock.json",
             "package.json",
             "CHANGELOG.md"
           ],
