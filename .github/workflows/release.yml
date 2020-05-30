@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     # Job name is Greeting
-    name: Semantic-Release
+    name: Release-Build
     # This job runs on Linux
     runs-on: ubuntu-latest
     steps:
@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: "@box2home"
+          scope: "@selmi-karim"
       - name: NPM install
         run: npm install
       - name: Release
