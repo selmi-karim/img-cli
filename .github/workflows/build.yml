@@ -1,0 +1,42 @@
+name: img-cli
+# This workflow is triggered on pushes to the repository.
+on:
+  push:
+    branches:
+      - master
+      - develop
+jobs:
+  build:
+    # Job name is Greeting
+    name: Build
+    # This job runs on Linux
+    runs-on: ubuntu-latest
+    steps:
+      # This step uses GitHub's hello-world-javascript-action: https://github.com/actions/hello-world-javascript-action
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: install node js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+          scope: "@selmi-karim"
+      - name: NPM install
+        run: npm install
+      - name: Publish to GPR
+        env:
+          COMMIT_FILTER: "chore(release)"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        run: |
+          # Get last commit message
+          readonly local last_commit_log=$(git log -1 --pretty=format:"%s")
+          echo "last commit log: $last_commit_log"
+          readonly local filter_count=$(echo "$last_commit_log" | grep -c "$COMMIT_FILTER" )
+          echo "number of occurence of '$COMMIT_FILTER' in '$last_commit_log': $filter_count"
+          if [[ "$filter_count" -eq 0 ]]; then
+            echo "no need to publish new version to GPR"
+          else
+            echo "GPR should be updated"
+            npm publish
+          fi
