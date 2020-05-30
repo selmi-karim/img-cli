@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/selmi-karim/img-cli/compare/v1.1.3...v1.1.4) (2020-05-30)
+
+
+### Bug Fixes
+
+* npm registry ([41f71e6](https://github.com/selmi-karim/img-cli/commit/41f71e6b5dc451fb6d3c3cf262bba4ca05a1ea7e))
+
 ## [1.1.3](https://github.com/selmi-karim/img-cli/compare/v1.1.2...v1.1.3) (2020-05-30)
 
 
