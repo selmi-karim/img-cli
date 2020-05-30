@@ -1,9 +1,3 @@
-/*
- * @Author: kerim selmi 
- * @Date: 2018-06-18 16:54:23 
- * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-20 15:39:11
- */
 const fs = require('fs')
 const mkdirp = require('mkdirp')
 var getDirName = require('path').dirname

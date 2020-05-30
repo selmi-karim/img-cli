@@ -1,9 +1,3 @@
-/*
- * @Author: kerim selmi 
- * @Date: 2018-06-19 13:01:08 
- * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-20 12:57:18
- */
 var path = require('path')
 var spawn = require('child_process').spawn
 var phantomjs = require('phantomjs-prebuilt')
@@ -47,7 +41,8 @@ const getImageUrls = (url, callback) => {
 
     phantom.on('close', function (code) {
       if (!images && !error) {
-        error = new Error('no images found')
+        error = new Error('no images found', code)
+        reject(error)
       }      
       resolve(images)
       if (callback) callback(null, images)

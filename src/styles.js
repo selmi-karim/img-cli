@@ -1,9 +1,3 @@
-/*
- * @Author: kerim selmi 
- * @Date: 2018-06-18 16:54:02 
- * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-19 12:15:06
- */
 const chalk = require('chalk')
 const figlet = require('figlet')
 const _cliProgress = require('cli-progress')
@@ -12,7 +6,7 @@ const ora = require('ora');
 
 const log = console.log
 const clear = () => {
-    process.stdout.write('\033c')
+    process.stdout.write('\u033c')     // eslint-disable-line
     console.log('')
     console.log('')
     console.log(figlet.textSync('Pingo', {

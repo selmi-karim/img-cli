@@ -1,13 +1,7 @@
-/*
- * @Author: kerim selmi 
- * @Date: 2018-06-18 16:54:30 
- * @Last Modified by: kerim selmi
- * @Last Modified time: 2018-06-19 13:05:37
- */
+
 const getImages = require('./img_urls')
 const download = require('./download.js')
 const styles = require('./styles')
-const ora = require('ora');
 
 
 const uid = () => {
@@ -20,7 +14,6 @@ const getImage = (url, type, directory) => {
     if (!err) {
       styles.spinner1.succeed()
       styles.green(images.length + ' images found');
-      console.log()
       // start the progress bar with a total value of 200 and start value of 0
       if (images.length > 0) {
         styles.bar.start(images.length, 0)
@@ -34,7 +27,7 @@ const getImage = (url, type, directory) => {
 }
 
 const fetch = (directory, type, images) => {
-  images.forEach((element, index) => {
+  images.forEach((element) => {
     const name = uid()
     download.saveImg(directory, name, element.url)
   })
