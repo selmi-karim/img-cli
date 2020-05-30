@@ -44,5 +44,6 @@ jobs:
           else
             echo "GPR should be updated"
             cat package.json
+            ls *
             npm publish
           fi
