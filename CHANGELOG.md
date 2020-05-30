@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/selmi-karim/img-cli/compare/v1.1.4...v1.1.5) (2020-05-30)
+
+
+### Bug Fixes
+
+* registry scop ([e58f28b](https://github.com/selmi-karim/img-cli/commit/e58f28b695ed495de5a1a22af6b6c1be2c265979))
+
 ## [1.1.4](https://github.com/selmi-karim/img-cli/compare/v1.1.3...v1.1.4) (2020-05-30)
 
 
