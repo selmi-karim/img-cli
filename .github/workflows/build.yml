@@ -28,7 +28,7 @@ jobs:
           COMMIT_FILTER: "chore(release)"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        run: | 
+        run: |
           # Get last commit message
           readonly local last_commit_log=$(git log -1 --pretty=format:"%s")
           echo "last commit log: $last_commit_log"
