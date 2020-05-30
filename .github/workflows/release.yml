@@ -43,5 +43,6 @@ jobs:
             echo "no need to publish new version to GPR"
           else
             echo "GPR should be updated"
+            cat package.json
             npm publish
           fi
