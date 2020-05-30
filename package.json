@@ -74,8 +74,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:fix && npm run format && npm run stylelint:fix",
-      "pre-push": "npm run lint && npm run format && npm run stylelint",
+      "pre-commit": "npm run lint:fix && npm run format",
+      "pre-push": "npm run lint && npm run format",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
