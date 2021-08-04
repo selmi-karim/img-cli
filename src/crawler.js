@@ -20,8 +20,6 @@ const getImage = (url, type, directory) => {
         styles.bar.start(images.length, 0);
         fetch(directory, type, images);
       }
-    } else {
-      //styles.red('-------->> ')
     }
   });
 };
